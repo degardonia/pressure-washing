@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean Start Pressure Washing | Lees Summit, MO</title>
+  <meta name="description" content="Professional pressure washing services in Lees Summit, MO. House washing, driveway cleaning, deck cleaning, and more. Call 816-447-6448 for a free estimate." />
+
+  <!-- Tailwind CSS via CDN (Play CDN for full utility support) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e3a8a',
+              900: '#1e3062',
+            },
+            accent: {
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea6c10',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Smooth hero gradient overlay */
+    .hero-overlay {
+      background: linear-gradient(135deg, rgba(30, 48, 98, 0.88) 0%, rgba(30, 58, 138, 0.72) 50%, rgba(0,0,0,0.45) 100%);
+    }
+    /* Section divider wave */
+    .wave-divider svg { display: block; }
+    /* Fade-in animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-up { animation: fadeUp 0.6s ease-out both; }
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    /* Star rating */
+    .stars { color: #f59e0b; letter-spacing: 1px; }
+    /* Mobile nav transition */
+    #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+    /* Sticky bottom bar above mobile bottom chrome */
+    #sticky-bar { z-index: 50; }
+    /* Card hover lift */
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(30,58,138,0.13); }
+    .service-card { transition: transform 0.2s, box-shadow 0.2s; }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-white pb-20">
+
+  <!-- ===================================================
+       TOP INFO BAR
+  =================================================== -->
+  <div class="bg-brand-900 text-white text-xs md:text-sm">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between gap-1">
+
+      <!-- Left: address + hours -->
+      <div class="flex items-center gap-4 text-blue-200">
+        <span class="flex items-center gap-1">
+          <!-- map pin icon -->
+          <svg class="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+          Lees Summit, MO
+        </span>
+        <span class="flex items-center gap-1">
+          <!-- clock icon -->
+          <svg class="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+          Mon–Sun 8am–8pm
+        </span>
+      </div>
+
+      <!-- Center: phone -->
+      <a href="tel:8164476448" class="font-semibold text-white flex items-center gap-1 hover:text-accent-400 transition-colors">
+        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+        (816) 447-6448
+      </a>
+
+      <!-- Right: social -->
+      <div class="flex items-center gap-3">
+        <span class="text-blue-300 hidden sm:inline">Follow us:</span>
+        <!-- Facebook -->
+        <a href="#" aria-label="Facebook" class="text-blue-200 hover:text-white transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <!-- Google (placeholder) -->
+        <a href="#" aria-label="Google Reviews" class="text-blue-200 hover:text-white transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===================================================
+       STICKY NAVIGATION
+  =================================================== -->
+  <header id="navbar" class="sticky top-0 bg-white/95 backdrop-blur-sm shadow-sm z-40 transition-shadow duration-300">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+
+      <!-- Logo / Brand -->
+      <a href="#hero" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-full bg-brand-800 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12H3.34m14.9-7.07l-.71.71M7.17 17.17l-.71.71m12.02.71l-.71-.71M7.17 6.83l-.71-.71"/>
+            <circle cx="12" cy="12" r="4" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="leading-tight">
+          <span class="block font-bold text-brand-900 text-sm leading-none">Clean Start</span>
+          <span class="block text-xs text-gray-500 leading-none">Pressure Washing</span>
+        </div>
+      </a>
+
+      <!-- Desktop nav links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-600">
+        <a href="#services" class="hover:text-brand-700 transition-colors">Services</a>
+        <a href="#about"    class="hover:text-brand-700 transition-colors">About Us</a>
+        <a href="#testimonials" class="hover:text-brand-700 transition-colors">Reviews</a>
+        <a href="#service-area"  class="hover:text-brand-700 transition-colors">Service Area</a>
+        <a href="#contact"  class="hover:text-brand-700 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <a href="tel:8164476448" class="hidden md:inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold text-sm px-5 py-2.5 rounded-full shadow transition-colors">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+        Call Now – Free Quote
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button id="hamburger-btn" aria-label="Toggle menu" class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors">
+        <svg id="icon-open"  class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown menu -->
+    <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 opacity-0 bg-white border-t border-gray-100">
+      <nav class="flex flex-col px-4 py-3 gap-1 text-sm font-medium text-gray-700">
+        <a href="#services"      class="px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors" onclick="closeMenu()">Services</a>
+        <a href="#about"         class="px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors" onclick="closeMenu()">About Us</a>
+        <a href="#testimonials"  class="px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors" onclick="closeMenu()">Reviews</a>
+        <a href="#service-area"  class="px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors" onclick="closeMenu()">Service Area</a>
+        <a href="#contact"       class="px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors" onclick="closeMenu()">Contact</a>
+        <a href="tel:8164476448" class="mt-2 flex items-center justify-center gap-2 bg-accent-500 text-white font-semibold px-4 py-3 rounded-full shadow transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          Call (816) 447-6448
+        </a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ===================================================
+       HERO SECTION
+  =================================================== -->
+  <section id="hero" class="relative min-h-[92vh] flex items-center overflow-hidden">
+
+    <!-- Background image -->
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+         style="background-image: url('photos/House.jpeg')">
+    </div>
+    <div class="hero-overlay absolute inset-0"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 py-16 md:py-24 w-full">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+
+        <!-- Left: headline + CTAs -->
+        <div class="flex-1 text-white text-center lg:text-left">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 text-white/90 text-xs font-semibold px-4 py-1.5 rounded-full mb-6 animate-fade-up">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            Locally Owned &amp; Operated · Lees Summit, MO
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-5 animate-fade-up delay-100">
+            Your Home, <br class="hidden sm:block"/>
+            <span class="text-accent-400">Sparkling Clean.</span>
+            <br/>Guaranteed.
+          </h1>
+
+          <p class="text-lg sm:text-xl text-blue-100 max-w-lg mx-auto lg:mx-0 mb-8 animate-fade-up delay-200">
+            Professional pressure washing for homes &amp; businesses. Driveways, decks, house washes, and more — with eco-friendly products and 100% satisfaction guaranteed.
+          </p>
+
+          <!-- Social proof chips -->
+          <div class="flex flex-wrap justify-center lg:justify-start gap-3 mb-8 animate-fade-up delay-300">
+            <div class="flex items-center gap-1.5 bg-white/10 border border-white/20 rounded-full px-3 py-1.5 text-sm text-white">
+              <span class="stars text-base">★★★★★</span> 5-Star Rated
+            </div>
+            <div class="flex items-center gap-1.5 bg-white/10 border border-white/20 rounded-full px-3 py-1.5 text-sm text-white">
+              <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Fully Insured
+            </div>
+            <div class="flex items-center gap-1.5 bg-white/10 border border-white/20 rounded-full px-3 py-1.5 text-sm text-white">
+              <svg class="w-4 h-4 text-blue-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/></svg>
+              Eco-Friendly Products
+            </div>
+          </div>
+
+          <!-- CTA buttons -->
+          <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start animate-fade-up delay-300">
+            <a href="tel:8164476448"
+               class="inline-flex items-center justify-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all active:scale-95">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+              Call for a Free Quote
+            </a>
+            <a href="#contact"
+               class="inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 border border-white/40 text-white font-semibold text-lg px-8 py-4 rounded-full backdrop-blur-sm transition-all">
+              Get a Free Estimate
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: hero contact form -->
+        <div class="w-full lg:w-auto lg:min-w-[360px]">
+          <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <div class="bg-brand-800 px-6 py-4">
+              <h2 class="text-white font-bold text-lg">Get Your Free Estimate</h2>
+              <p class="text-blue-200 text-sm mt-0.5">We'll get back to you within a few hours.</p>
+            </div>
+            <form id="hero-form" class="px-6 py-5 space-y-3" novalidate>
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1" for="h-name">Your Name</label>
+                <input id="h-name" name="name" type="text" required placeholder="Jane Smith"
+                       class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1" for="h-phone">Phone Number</label>
+                <input id="h-phone" name="phone" type="tel" required placeholder="(816) 555-0123"
+                       class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1" for="h-email">Email Address</label>
+                <input id="h-email" name="email" type="email" required placeholder="jane@email.com"
+                       class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1" for="h-message">Tell us about your project</label>
+                <textarea id="h-message" name="message" rows="3" placeholder="E.g. driveway + house wash, Lees Summit..."
+                          class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition resize-none"></textarea>
+              </div>
+              <button type="submit"
+                      class="w-full bg-accent-500 hover:bg-accent-600 text-white font-bold py-3 rounded-lg shadow transition-colors active:scale-95 text-sm">
+                Send My Request →
+              </button>
+              <p id="hero-form-msg" class="text-center text-sm hidden"></p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 animate-bounce hidden md:block">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       TRUST BAR
+  =================================================== -->
+  <section class="bg-brand-800 text-white py-5">
+    <div class="max-w-5xl mx-auto px-4">
+      <ul class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-medium">
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-accent-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723...M13.707 8.707a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          100% Satisfaction Guaranteed
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-accent-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          Fully Insured
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-accent-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/></svg>
+          Eco-Friendly Products
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-accent-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"/></svg>
+          Flexible Scheduling
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-accent-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+          Locally Owned in Lees Summit
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       SERVICES SECTION
+  =================================================== -->
+  <section id="services" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+
+      <!-- Section header -->
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="inline-block text-brand-600 font-semibold text-sm tracking-widest uppercase mb-2">What We Do</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Services That Make Your Property Shine</h2>
+        <p class="text-gray-500 text-lg">From driveways to decks, we've got every surface covered with professional-grade results.</p>
+      </div>
+
+      <!-- Services grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- House Washing -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-44 overflow-hidden">
+            <img src="photos/House.jpeg"
+                 alt="House Washing" class="w-full h-full object-cover" loading="lazy"/>
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center mb-3">
+              <svg class="w-5 h-5 text-brand-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            </div>
+            <h3 class="font-bold text-lg text-gray-900 mb-1">House Washing</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Restore your home's curb appeal with our gentle soft-wash technique that safely removes dirt, mold, and mildew.</p>
+          </div>
+        </div>
+
+        <!-- Driveway Cleaning -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-44 overflow-hidden">
+            <img src="photos/Driveway%20Washing.webp"
+                 alt="Driveway Cleaning" class="w-full h-full object-cover" loading="lazy"/>
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center mb-3">
+              <svg class="w-5 h-5 text-brand-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+            </div>
+            <h3 class="font-bold text-lg text-gray-900 mb-1">Driveway &amp; Sidewalk Cleaning</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Blast away oil stains, tire marks, and built-up grime. Your driveway will look brand new in just one visit.</p>
+          </div>
+        </div>
+
+        <!-- Deck & Patio -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-44 overflow-hidden">
+            <img src="photos/Deck.jpeg"
+                 alt="Deck and Patio Cleaning" class="w-full h-full object-cover" loading="lazy"/>
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center mb-3">
+              <svg class="w-5 h-5 text-brand-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            </div>
+            <h3 class="font-bold text-lg text-gray-900 mb-1">Deck &amp; Patio Cleaning</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Bring your outdoor living space back to life. We safely clean wood, composite, and concrete surfaces.</p>
+          </div>
+        </div>
+
+        <!-- Fence Cleaning -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-44 overflow-hidden">
+            <img src="photos/Fence.jpg"
+                 alt="Fence Cleaning" class="w-full h-full object-cover object-center" loading="lazy"/>
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center mb-3">
+              <svg class="w-5 h-5 text-brand-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+            </div>
+            <h3 class="font-bold text-lg text-gray-900 mb-1">Fence Cleaning</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Eliminate algae, mold, and weathered stains from wood, vinyl, or chain-link fences with impressive results.</p>
+          </div>
+        </div>
+
+        <!-- Gutter Cleaning -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-44 overflow-hidden">
+            <img src="photos/Snow.jpeg"
+                 alt="Snow Removal and Seasonal Services" class="w-full h-full object-cover" loading="lazy"/>
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center mb-3">
+              <svg class="w-5 h-5 text-brand-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 4h18M3 8h18M5 12l7 8 7-8"/></svg>
+            </div>
+            <h3 class="font-bold text-lg text-gray-900 mb-1">Outdoor Furniture &amp; More</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Refresh garbage cans, outdoor furniture, retaining walls, and other surfaces around your property.</p>
+          </div>
+        </div>
+
+        <!-- Seasonal Services -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-44 overflow-hidden">
+            <img src="photos/Fall.webp"
+                 alt="Fall Seasonal Services" class="w-full h-full object-cover" loading="lazy"/>
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center mb-3">
+              <svg class="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12H3.34m14.9-7.07l-.71.71M7.17 17.17l-.71.71m12.02.71l-.71-.71M7.17 6.83l-.71-.71M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+            </div>
+            <h3 class="font-bold text-lg text-gray-900 mb-1">Seasonal Services</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Fall leaf removal, hedge trimming, and winter snow removal — we're your year-round property maintenance partner.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="text-center mt-12">
+        <a href="tel:8164476448"
+           class="inline-flex items-center gap-2 bg-brand-800 hover:bg-brand-900 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-colors text-base">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          Call Today for a Free Quote
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       ABOUT US SECTION
+  =================================================== -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+
+        <!-- Image side -->
+        <div class="w-full lg:w-1/2 relative">
+          <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+            <img src="photos/Owner.avif"
+                 alt="Jeremy Phillips – Owner of Clean Start Pressure Washing"
+                 class="w-full h-full object-cover" loading="lazy"/>
+          </div>
+          <!-- Floating stat card -->
+          <div class="absolute -bottom-5 -right-4 md:-right-6 bg-white rounded-xl shadow-lg px-5 py-4 flex items-center gap-3 border border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-accent-100 flex items-center justify-center">
+              <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <div>
+              <p class="font-black text-xl text-gray-900 leading-none">5.0</p>
+              <p class="text-xs text-gray-500">Average Rating</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text side -->
+        <div class="w-full lg:w-1/2">
+          <span class="inline-block text-brand-600 font-semibold text-sm tracking-widest uppercase mb-2">Our Story</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-5 leading-tight">Hi, I'm Jeremy.<br/>Welcome to Clean Start.</h2>
+          <p class="text-gray-600 text-lg leading-relaxed mb-5">
+            I founded Clean Start Pressure Washing because I believe every home and business deserves to look its absolute best — without breaking the bank. As a locally owned and operated company right here in Lees Summit, MO, I take pride in every job I do.
+          </p>
+          <p class="text-gray-600 text-base leading-relaxed mb-8">
+            We use eco-friendly cleaning solutions that are tough on grime but gentle on your property and the environment. With flexible scheduling that includes evenings and weekends, we make it easy to fit a clean into your busy life.
+          </p>
+
+          <!-- Value list -->
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span class="text-gray-700"><strong>No contracts</strong> — just honest, quality work every single time.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span class="text-gray-700"><strong>Free estimates</strong> — know exactly what you're paying before we start.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span class="text-gray-700"><strong>100% satisfaction guarantee</strong> — we don't leave until you're happy.</span>
+            </li>
+          </ul>
+
+          <a href="tel:8164476448"
+             class="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-bold px-7 py-3.5 rounded-full shadow transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            Call Jeremy: (816) 447-6448
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       TESTIMONIALS SECTION
+  =================================================== -->
+  <section id="testimonials" class="py-20 bg-brand-900">
+    <div class="max-w-7xl mx-auto px-4">
+
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="inline-block text-blue-300 font-semibold text-sm tracking-widest uppercase mb-2">Happy Customers</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-4">Don't Just Take Our Word For It</h2>
+        <p class="text-blue-200 text-lg">Real reviews from homeowners right here in the Kansas City area.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Testimonial 1 -->
+        <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6 flex flex-col gap-4">
+          <div class="stars text-xl">★★★★★</div>
+          <blockquote class="text-white/90 text-base leading-relaxed flex-1">
+            "Jeremy did an incredible job on our driveway and the front of our house. You could see the before-and-after difference instantly. Couldn't be happier with the results!"
+          </blockquote>
+          <div class="flex items-center gap-3 border-t border-white/15 pt-4">
+            <div class="w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center text-white font-bold text-sm shrink-0">MT</div>
+            <div>
+              <p class="text-white font-semibold text-sm">Mike T.</p>
+              <p class="text-blue-300 text-xs">Lees Summit, MO</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6 flex flex-col gap-4">
+          <div class="stars text-xl">★★★★★</div>
+          <blockquote class="text-white/90 text-base leading-relaxed flex-1">
+            "Best pressure washing service in the area, hands down. Professional, on time, and the deck looks brand new. We'll definitely be calling Clean Start every year!"
+          </blockquote>
+          <div class="flex items-center gap-3 border-t border-white/15 pt-4">
+            <div class="w-10 h-10 rounded-full bg-accent-500 flex items-center justify-center text-white font-bold text-sm shrink-0">SK</div>
+            <div>
+              <p class="text-white font-semibold text-sm">Sarah K.</p>
+              <p class="text-blue-300 text-xs">Greenwood, MO</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6 flex flex-col gap-4">
+          <div class="stars text-xl">★★★★★</div>
+          <blockquote class="text-white/90 text-base leading-relaxed flex-1">
+            "Hired Jeremy for a full house wash and patio clean before we put our home on the market. Our realtor said it made a huge difference. Highly recommend to anyone!"
+          </blockquote>
+          <div class="flex items-center gap-3 border-t border-white/15 pt-4">
+            <div class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-sm shrink-0">DM</div>
+            <div>
+              <p class="text-white font-semibold text-sm">David M.</p>
+              <p class="text-blue-300 text-xs">Overland Park, KS</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6 flex flex-col gap-4">
+          <div class="stars text-xl">★★★★★</div>
+          <blockquote class="text-white/90 text-base leading-relaxed flex-1">
+            "Super easy to work with and very affordable. My fence was covered in green algae and now it looks completely new. Scheduled me within two days of calling. Will use again!"
+          </blockquote>
+          <div class="flex items-center gap-3 border-t border-white/15 pt-4">
+            <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-sm shrink-0">LR</div>
+            <div>
+              <p class="text-white font-semibold text-sm">Lisa R.</p>
+              <p class="text-blue-300 text-xs">Blue Springs, MO</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6 flex flex-col gap-4">
+          <div class="stars text-xl">★★★★★</div>
+          <blockquote class="text-white/90 text-base leading-relaxed flex-1">
+            "Called on a Friday and Jeremy was out Saturday morning. Our sidewalks and driveway had years of buildup — looked brand new within an hour. Incredibly professional."
+          </blockquote>
+          <div class="flex items-center gap-3 border-t border-white/15 pt-4">
+            <div class="w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center text-white font-bold text-sm shrink-0">TC</div>
+            <div>
+              <p class="text-white font-semibold text-sm">Tom C.</p>
+              <p class="text-blue-300 text-xs">Independence, MO</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6 flex flex-col gap-4">
+          <div class="stars text-xl">★★★★★</div>
+          <blockquote class="text-white/90 text-base leading-relaxed flex-1">
+            "Honest pricing, great results, zero hassle. Jeremy pressure washed our entire back patio and it looks stunning. I've already referred him to three of my neighbors!"
+          </blockquote>
+          <div class="flex items-center gap-3 border-t border-white/15 pt-4">
+            <div class="w-10 h-10 rounded-full bg-rose-600 flex items-center justify-center text-white font-bold text-sm shrink-0">AW</div>
+            <div>
+              <p class="text-white font-semibold text-sm">Amanda W.</p>
+              <p class="text-blue-300 text-xs">Kansas City, MO</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Google badge -->
+      <div class="mt-10 text-center">
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-5 py-2.5 text-sm text-white/80">
+          <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          5.0 stars on Google · Lees Summit's Top Rated Pressure Washing
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       SERVICE AREA SECTION
+  =================================================== -->
+  <section id="service-area" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-block text-brand-600 font-semibold text-sm tracking-widest uppercase mb-2">Where We Work</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Proudly Serving the Kansas City Area</h2>
+        <p class="text-gray-500 text-lg">Based in Lees Summit, MO — we cover a wide service area across the metro.</p>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-10 items-stretch">
+
+        <!-- Google Maps embed (no API key required) -->
+        <div class="flex-1 rounded-2xl overflow-hidden shadow-lg border border-gray-100 min-h-72">
+          <iframe
+            title="Clean Start Pressure Washing Service Area – Lees Summit, MO"
+            src="https://maps.google.com/maps?q=Lee%27s+Summit%2C+MO&t=m&z=11&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="100%"
+            style="min-height: 320px; border: 0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- Area list -->
+        <div class="lg:w-72 flex flex-col justify-center">
+          <h3 class="font-bold text-gray-900 text-lg mb-5">Cities We Serve</h3>
+          <ul class="space-y-2.5">
+            <li class="flex items-center gap-2.5 text-gray-700">
+              <svg class="w-4 h-4 text-accent-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+              Lees Summit, MO <span class="ml-1 text-xs font-semibold text-brand-600 bg-brand-50 px-2 py-0.5 rounded-full">HQ</span>
+            </li>
+            <li class="flex items-center gap-2.5 text-gray-700"><svg class="w-4 h-4 text-accent-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Raytown, MO</li>
+            <li class="flex items-center gap-2.5 text-gray-700"><svg class="w-4 h-4 text-accent-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Greenwood, MO</li>
+            <li class="flex items-center gap-2.5 text-gray-700"><svg class="w-4 h-4 text-accent-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Blue Springs, MO</li>
+            <li class="flex items-center gap-2.5 text-gray-700"><svg class="w-4 h-4 text-accent-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Independence, MO</li>
+            <li class="flex items-center gap-2.5 text-gray-700"><svg class="w-4 h-4 text-accent-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Overland Park, KS</li>
+            <li class="flex items-center gap-2.5 text-gray-700"><svg class="w-4 h-4 text-accent-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Kansas City, MO</li>
+            <li class="flex items-center gap-2.5 text-gray-700"><svg class="w-4 h-4 text-accent-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>And surrounding areas</li>
+          </ul>
+          <p class="mt-5 text-sm text-gray-500">Not sure if we cover your area? <a href="tel:8164476448" class="text-brand-600 font-semibold hover:underline">Give us a call!</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       CONTACT FORM + FOOTER SECTION
+  =================================================== -->
+  <section id="contact" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="inline-block text-brand-600 font-semibold text-sm tracking-widest uppercase mb-2">Get In Touch</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Ready for a Cleaner Property?</h2>
+        <p class="text-gray-500 text-lg">Fill out the form below and we'll reach out within a few hours to schedule your free estimate.</p>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-10 max-w-5xl mx-auto">
+
+        <!-- Contact info cards -->
+        <div class="flex flex-col gap-5 lg:w-64 shrink-0">
+
+          <a href="tel:8164476448" class="flex items-center gap-4 bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
+            <div class="w-11 h-11 rounded-xl bg-brand-800 flex items-center justify-center shrink-0 group-hover:bg-brand-700 transition-colors">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs text-gray-500 font-medium uppercase tracking-wide">Call / Text</p>
+              <p class="font-bold text-gray-900 text-sm">(816) 447-6448</p>
+            </div>
+          </a>
+
+          <a href="mailto:JeremyPhillips816@gmail.com" class="flex items-center gap-4 bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
+            <div class="w-11 h-11 rounded-xl bg-brand-800 flex items-center justify-center shrink-0 group-hover:bg-brand-700 transition-colors">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs text-gray-500 font-medium uppercase tracking-wide">Email</p>
+              <p class="font-bold text-gray-900 text-xs break-all">JeremyPhillips816<br/>@gmail.com</p>
+            </div>
+          </a>
+
+          <div class="flex items-center gap-4 bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+            <div class="w-11 h-11 rounded-xl bg-brand-800 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+            </div>
+            <div>
+              <p class="text-xs text-gray-500 font-medium uppercase tracking-wide">Hours</p>
+              <p class="font-bold text-gray-900 text-sm">Mon–Sun: 8am–8pm</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+            <div class="w-11 h-11 rounded-xl bg-brand-800 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            </div>
+            <div>
+              <p class="text-xs text-gray-500 font-medium uppercase tracking-wide">Based In</p>
+              <p class="font-bold text-gray-900 text-sm">Lees Summit, MO</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main contact form -->
+        <div class="flex-1">
+          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div class="bg-brand-800 px-6 py-5">
+              <h3 class="text-white font-bold text-xl">Send Us a Message</h3>
+              <p class="text-blue-200 text-sm mt-1">Free estimates — no obligation whatsoever.</p>
+            </div>
+            <form id="contact-form" class="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4" novalidate>
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1.5" for="c-name">Full Name <span class="text-red-400">*</span></label>
+                <input id="c-name" name="name" type="text" required placeholder="Jane Smith"
+                       class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1.5" for="c-phone">Phone Number <span class="text-red-400">*</span></label>
+                <input id="c-phone" name="phone" type="tel" required placeholder="(816) 555-0123"
+                       class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" />
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-xs font-semibold text-gray-600 mb-1.5" for="c-email">Email Address <span class="text-red-400">*</span></label>
+                <input id="c-email" name="email" type="email" required placeholder="jane@email.com"
+                       class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" />
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-xs font-semibold text-gray-600 mb-1.5" for="c-message">Tell us about your project</label>
+                <textarea id="c-message" name="message" rows="4"
+                          placeholder="E.g. driveway, house wash, deck — let us know what you need!"
+                          class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition resize-none"></textarea>
+              </div>
+              <div class="sm:col-span-2">
+                <button type="submit"
+                        class="w-full bg-accent-500 hover:bg-accent-600 active:scale-[0.99] text-white font-bold py-3.5 rounded-xl shadow transition-all text-base">
+                  Send My Request — It's Free! →
+                </button>
+              </div>
+              <p id="contact-form-msg" class="sm:col-span-2 text-center text-sm hidden py-2 rounded-lg"></p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       FOOTER
+  =================================================== -->
+  <footer class="bg-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-12">
+      <div class="flex flex-col md:flex-row justify-between gap-8 mb-10">
+
+        <!-- Brand -->
+        <div class="md:max-w-xs">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-9 h-9 rounded-full bg-brand-700 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12H3.34m14.9-7.07l-.71.71M7.17 17.17l-.71.71m12.02.71l-.71-.71M7.17 6.83l-.71-.71"/>
+                <circle cx="12" cy="12" r="4" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="font-bold text-lg">Clean Start Pressure Washing</span>
+          </div>
+          <p class="text-blue-300 text-sm leading-relaxed">Professional pressure washing services in Lees Summit, MO. Locally owned, fully insured, and 100% satisfaction guaranteed.</p>
+        </div>
+
+        <!-- Quick links -->
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-blue-300 mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-blue-100">
+            <li><a href="#services"     class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="#about"        class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#testimonials" class="hover:text-white transition-colors">Reviews</a></li>
+            <li><a href="#service-area" class="hover:text-white transition-colors">Service Area</a></li>
+            <li><a href="#contact"      class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-blue-300 mb-3">Contact</h4>
+          <ul class="space-y-2 text-sm text-blue-100">
+            <li><a href="tel:8164476448" class="hover:text-white transition-colors">(816) 447-6448</a></li>
+            <li><a href="mailto:JeremyPhillips816@gmail.com" class="hover:text-white transition-colors">JeremyPhillips816@gmail.com</a></li>
+            <li>Lees Summit, MO</li>
+            <li>Mon–Sun: 8am–8pm</li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-widest text-blue-300 mb-3">Follow Us</h4>
+          <div class="flex gap-3">
+            <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" aria-label="Google Business" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-blue-400">
+        <p>© 2025 Clean Start Pressure Washing Services LLC. All rights reserved.</p>
+        <p>Lees Summit, MO · Fully Insured · Locally Owned</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ===================================================
+       STICKY BOTTOM BAR
+  =================================================== -->
+  <div id="sticky-bar" class="fixed bottom-0 left-0 right-0 bg-brand-800 text-white shadow-2xl border-t border-brand-700">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+      <p class="text-sm font-medium text-blue-100 hidden sm:block">
+        Ready to get started? Call to get a <strong class="text-white">free quote</strong>!
+      </p>
+      <p class="text-xs font-medium text-blue-200 sm:hidden">Free quote — call now!</p>
+      <a href="tel:8164476448"
+         class="shrink-0 inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-lg transition-colors active:scale-95">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+        <span class="hidden sm:inline">(816) 447-6448</span>
+        <span class="sm:hidden">Call (816) 447-6448</span>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- ===================================================
+       JAVASCRIPT
+  =================================================== -->
+  <script>
+    /* ── Mobile hamburger menu ── */
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu   = document.getElementById('mobile-menu');
+    const iconOpen     = document.getElementById('icon-open');
+    const iconClose    = document.getElementById('icon-close');
+    let menuOpen = false;
+
+    hamburgerBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+        mobileMenu.style.opacity   = '1';
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+      } else {
+        closeMenu();
+      }
+    });
+
+    function closeMenu() {
+      menuOpen = false;
+      mobileMenu.style.maxHeight = '0';
+      mobileMenu.style.opacity   = '0';
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    }
+
+    /* ── Navbar shadow on scroll ── */
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 20) {
+        navbar.classList.add('shadow-md');
+      } else {
+        navbar.classList.remove('shadow-md');
+      }
+    });
+
+    /* ── Form submission handler ──
+       To connect to Resend: replace the simulateSubmit function
+       with a fetch() POST to your backend endpoint that calls
+       the Resend API: https://resend.com/docs/send-email
+       NEVER expose your Resend API key in client-side code.      */
+    function handleForm(formId, msgId) {
+      const form = document.getElementById(formId);
+      const msgEl = document.getElementById(msgId);
+      if (!form) return;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const btn = form.querySelector('button[type="submit"]');
+        const origText = btn.textContent;
+
+        // Basic validation
+        const name    = form.querySelector('[name="name"]').value.trim();
+        const phone   = form.querySelector('[name="phone"]').value.trim();
+        const email   = form.querySelector('[name="email"]').value.trim();
+        const message = form.querySelector('[name="message"]')?.value.trim() || '';
+
+        if (!name || !phone || !email) {
+          showMsg(msgEl, 'Please fill in all required fields.', 'error');
+          return;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          showMsg(msgEl, 'Please enter a valid email address.', 'error');
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+
+        try {
+          /* ── Resend integration point ──
+             Replace this block with your actual API call:
+
+             const res = await fetch('/api/send', {
+               method: 'POST',
+               headers: { 'Content-Type': 'application/json' },
+               body: JSON.stringify({ name, phone, email, message })
+             });
+             if (!res.ok) throw new Error('Server error');
+          */
+          await simulateSubmit(); // Remove when using real backend
+
+          form.reset();
+          showMsg(msgEl, '✓ Your request was sent! We\'ll be in touch within a few hours.', 'success');
+        } catch (err) {
+          showMsg(msgEl, 'Something went wrong. Please call us directly at (816) 447-6448.', 'error');
+        } finally {
+          btn.disabled = false;
+          btn.textContent = origText;
+        }
+      });
+    }
+
+    function showMsg(el, text, type) {
+      el.textContent = text;
+      el.className = `text-center text-sm py-2 px-3 rounded-lg mt-1 ${
+        type === 'success'
+          ? 'bg-green-50 text-green-700'
+          : 'bg-red-50 text-red-600'
+      }`;
+      el.classList.remove('hidden');
+      setTimeout(() => { el.classList.add('hidden'); }, 6000);
+    }
+
+    function simulateSubmit() {
+      return new Promise(resolve => setTimeout(resolve, 900));
+    }
+
+    handleForm('hero-form',    'hero-form-msg');
+    handleForm('contact-form', 'contact-form-msg');
+  </script>
+
+</body>
+</html>
